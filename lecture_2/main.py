@@ -11,10 +11,6 @@ def generate_profile(age: int):
 user_name = input("Hi! Enter your full name: ")
 birth_year_str = input("Enter your birth year: ")
 
-if not birth_year_str.isdigit():
-    print("Error! Not number")
-    birth_year_str = input("Enter your birth year: ")
-
 birth_year = int(birth_year_str)
 
 current_age = 2025 - birth_year
