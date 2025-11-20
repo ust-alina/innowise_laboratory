@@ -13,6 +13,16 @@ birth_year_str = input("Enter your birth year: ")
 
 if not birth_year_str.isdigit():
     print("Error! Not number")
+    birth_year_str = input("Enter your birth year: ")
+elif int(birth_year_str) < 1900:
+    sure_year = input(f"Are you sure? Your birth year {birth_year_str}? Type yes or no: ")
+    if sure_year == 'no':
+        birth_year_str = input("Enter your birth year: ")
+    elif sure_year == 'yes':
+        print("Ok")
+    else:
+        print("Command not recognized")
+        birth_year_str = input("Enter your birth year: ")
 
 birth_year = int(birth_year_str)
 
